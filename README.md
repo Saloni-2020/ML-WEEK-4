@@ -40,5 +40,48 @@ Predict Test Set
 Load libraries
 
 library(lattice)
+
 library(ggplot2)
+
 library(caret)
+
+Load dataset
+![image](https://user-images.githubusercontent.com/88283525/176158958-1b81168d-f694-4fea-b1a8-5142f4fe3797.png)
+
+Split training set into sub-training/test sets
+![image](https://user-images.githubusercontent.com/88283525/176159029-1c2d511c-5425-45ef-b852-d159368385a7.png)
+
+2) Explore Data
+
+Descriptive statistics
+![image](https://user-images.githubusercontent.com/88283525/176159176-fd047753-1838-4add-8fee-7da5d9b2c967.png)
+
+Visualization
+
+The "classe" variable is plotted out to visualize the spead of the types of exercise.
+![image](https://user-images.githubusercontent.com/88283525/176159368-177b5a67-9c17-46f5-9843-298b7e8d0e5b.png)
+
+3) Prepare Data
+
+Clean data
+
+Remove metadata (rows 1-7)
+
+subTrain <- subTrain[,-c(1:7)]
+Remove variables that contains mostly missing values
+
+# Check number of NAs in each column
+table(colSums(is.na(subTrain)))
+## 
+##     0 14419 14420 14421 14423 14424 14429 14446 14473 14474 14475 14476 14477 
+##    53    67     1     1     2     8     2     2     1     1     1     6     2 
+## 14718 
+##     6
+100 variables contains 98% or more missing values (14409/14718*100) and will be removed from the analysis.
+
+subTrain<- subTrain[,colSums(is.na(subTrain))<14409]
+Next, the variables with near-zero variance will be removed.
+
+nearZeroVar(subTrain)
+## integer(0)
+After removing the variables with missing values, the remaining 53 variables do not have near-zero variance.
