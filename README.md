@@ -67,21 +67,21 @@ Clean data
 
 Remove metadata (rows 1-7)
 
-subTrain <- subTrain[,-c(1:7)]
-Remove variables that contains mostly missing values
+![image](https://user-images.githubusercontent.com/88283525/176159858-3e62c31a-5b86-4a7a-94d3-1939ebc58978.png)
+![image](https://user-images.githubusercontent.com/88283525/176159972-812d4e0c-6aa4-4ad6-81e2-44d2011acbdd.png)
 
-# Check number of NAs in each column
-table(colSums(is.na(subTrain)))
-## 
-##     0 14419 14420 14421 14423 14424 14429 14446 14473 14474 14475 14476 14477 
-##    53    67     1     1     2     8     2     2     1     1     1     6     2 
-## 14718 
-##     6
-100 variables contains 98% or more missing values (14409/14718*100) and will be removed from the analysis.
+4) Evaluate Algorithms
 
-subTrain<- subTrain[,colSums(is.na(subTrain))<14409]
-Next, the variables with near-zero variance will be removed.
+Train Control
 
-nearZeroVar(subTrain)
-## integer(0)
-After removing the variables with missing values, the remaining 53 variables do not have near-zero variance.
+A 5-fold cross validation will be used to estimate accuracy.
+![image](https://user-images.githubusercontent.com/88283525/176160314-5a203d2a-f109-41d3-87d3-1eb0bbd0b873.png)
+
+![image](https://user-images.githubusercontent.com/88283525/176160394-4644b6cb-196f-477b-a527-cdfd88012b04.png)
+
+![image](https://user-images.githubusercontent.com/88283525/176160462-42b0f736-a7c0-4ab5-9900-b838194b3bbb.png)
+
+![image](https://user-images.githubusercontent.com/88283525/176160551-1b9c71ea-2a91-42e9-b042-cd0ff412148d.png)
+![image](https://user-images.githubusercontent.com/88283525/176160672-b89328f1-d28c-4ed2-9b40-d3f1d0758c56.png)
+
+
