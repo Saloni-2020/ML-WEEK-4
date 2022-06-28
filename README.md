@@ -83,5 +83,10 @@ A 5-fold cross validation will be used to estimate accuracy.
 
 ![image](https://user-images.githubusercontent.com/88283525/176160551-1b9c71ea-2a91-42e9-b042-cd0ff412148d.png)
 ![image](https://user-images.githubusercontent.com/88283525/176160672-b89328f1-d28c-4ed2-9b40-d3f1d0758c56.png)
+![image](https://user-images.githubusercontent.com/88283525/176160976-87b0729f-fd1c-414f-a112-93d652db4b7c.png)
+![image](https://user-images.githubusercontent.com/88283525/176161068-32de5a5b-57f8-4eab-a85b-99b1d9ddc7cb.png)
 
+![image](https://user-images.githubusercontent.com/88283525/176161162-2a4647e3-5ccb-44d7-9968-d7055dce02d2.png)
+![image](https://user-images.githubusercontent.com/88283525/176161261-2867f079-c71d-4203-906b-937d74f903cb.png)
+![image](https://user-images.githubusercontent.com/88283525/176161385-29a128c4-32cc-4ab4-b3fd-ce4624747bd9.png)
 
